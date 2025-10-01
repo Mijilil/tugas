@@ -1,5 +1,5 @@
 import React from 'react';
-import Ujian from './ujian/Ujian/Ujian_544241108'; // Adjusted path
+import Ujian from './ujian/Ujian/Ujian_544241108';
 
 export default function Page() {
   return (

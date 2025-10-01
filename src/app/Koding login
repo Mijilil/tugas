@@ -1,0 +1,81 @@
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+
+export default function SigninPage() {
+  const [nama, setNama] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+  };
+
+  return (
+    <div style={{ maxWidth: '800px', margin: '200px auto', padding: '20px', border: '5px solid white', borderRadius: '10px' }}>
+      <h2 style={{ textAlign: 'center', fontWeight: 'bold' }}>
+        Welcome 
+      </h2>
+      <form onSubmit={handleLogin}>
+        <div style={{ marginBottom: '10px' }}>
+          <label>Nama:</label><br />
+          <input
+            type="text"
+            value={nama}
+            onChange={(e) => setNama(e.target.value)}
+            style={{ width: '100%', padding: '8px' }}
+          />
+        </div>
+        <div style={{ marginBottom: '10px' }}>
+          <label>Password:</label><br />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            style={{ width: '100%', padding: '8px' }}
+          />
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <button
+            type="submit"
+            style={{
+              padding: '10px 20px',
+              backgroundColor: 'white',
+              color: 'black',
+              borderRadius: '10px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              transition: 'black 1s ease, color 1s ease'
+            }}
+            onMouseOver={(e) => {
+              e.target.style.backgroundColor = 'gray';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.backgroundColor = 'white';
+            }}
+          >
+            Sign In
+          </button>
+        </div>
+      </form>
+      <div style={{ textAlign: 'center', marginTop: '30px' }}>
+        <Link href="/about">
+          <button
+            style={{
+              padding: '10px 20px',
+              backgroundColor: '#172230ff',
+              color: 'white',
+              borderRadius: '10px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              border: 'none',
+              marginTop: '10px'
+            }}
+          >
+            Ke Halaman About
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+}
