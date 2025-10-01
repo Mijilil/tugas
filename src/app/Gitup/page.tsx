@@ -41,13 +41,18 @@ export default function DashboardPage() {
   const [jurnalClass, setJurnalClass] = useState("XI RPL 4");
   const [date, setDate] = useState("2025-09-29");
   const [chatInput, setChatInput] = useState("");
-
   return (
     <div className="min-h-screen bg-gray-50 p-6 font-sans">
       {/* Header */}
       <header className="flex justify-between items-center mb-6">
         <div className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-red-700">📶</span>
+          <span>
+            <img
+              src="/assets/Telkom.png"
+              alt="Logo Telkom"
+              className="w-8 h-8 object-contain inline-block align-middle"
+            />
+          </span>
           <h1 className="font-bold text-lg text-gray-900">SMK TELKOM MAKASSAR</h1>
         </div>
         <div className="flex items-center space-x-3">
@@ -305,9 +310,9 @@ export default function DashboardPage() {
             {/* News Content */}
             <div className="border rounded overflow-hidden">
               <img
-                src="https://i.ibb.co/dQVRpXF/aplikasi-cuti-terbaru.png"
-                alt="Aplikasi Cuti 3.0"
-                className="w-full"
+                src="/assets/Cuti.png"
+               alt="Aplikasi Cuti 3.0"
+               className="w-full"
               />
               <div className="p-3">
                 <h3 className="font-semibold text-gray-800 text-sm mb-1">Aplikasi CUTI 3.0</h3>
